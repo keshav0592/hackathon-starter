@@ -2,6 +2,7 @@ import React from "react";
 import Spinner from "react-spinkit";
 import { withAsyncAction } from "../../redux/HOCs";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./LoginForm.css";
@@ -31,10 +32,8 @@ class LoginForm extends React.Component {
       <div className="LoginForm">
         <Card style={{ width: "18rem" }} bg="dark">
           <Card.Body>
-            <Card.Title>Your favorite Microblogging platform</Card.Title>
-
+            <Card.Title>Stay Connected and Happy Hacking! </Card.Title>
             <hr />
-
             <form id="login-form" onSubmit={this.handleLogin}>
               {/* <label htmlFor="username">Username</label> */}
               <div>
@@ -64,6 +63,9 @@ class LoginForm extends React.Component {
               {loading && <Spinner name="circle" color="blue" />}
               {error && <p style={{ color: "red" }}>{error.message}</p>}
             </form>
+            <Button variant="info" type="submit">
+              <Link to="/NewAccount"> Sign Up</Link>
+            </Button>{" "}
           </Card.Body>
         </Card>
       </div>
