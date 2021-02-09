@@ -1,5 +1,8 @@
 import React from "react";
 import { withAsyncAction } from "../../redux/HOCs";
+import "./Messages.css"
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Messages extends React.Component {
   constructor(props) {
@@ -50,7 +53,7 @@ class Messages extends React.Component {
     if (this.state.messages) {
       display = this.state.messages.map((value) => {
         return (
-          <li key={value.id}>{value.text}</li>
+          <div key={value.id}>{value.text}</div>
         )
       })
     }
@@ -62,7 +65,7 @@ class Messages extends React.Component {
         </div>
         <div className="NewMessage">
           <input name="message" onChange={this.handleChange} value={this.state.message}/>
-          <button onClick={this.newMessageHandler}> Send Message </button>
+          <Button onClick={this.newMessageHandler}> Send Message </Button>
         </div>
       </div>
     );
