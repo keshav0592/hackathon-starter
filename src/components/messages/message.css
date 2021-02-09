@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+.Messages {
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+input {
+  color: black;
+  margin-top: 20px;
+}
+
+.buttonDiv {
+  display: list-item;
+  margin-bottom: 10px;
+}
+button {
+  position: relative;
+  top: -15px;
+  height: 30px;
+  text-align: center;
+}
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  float: left;
+}
+
+.deleteButton {
+  font-size: 10px;
+  height: 18px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  background-color: rgba(219, 25, 25, 0.534);
+  position: absolute;
+  z-index: 2;
+  display: none;
+  top: -0.5px;
+  left: 85%;
+}
+.deleteHoover:hover .deleteButton {
+  display: block;
+}
+.deleteHoover {
+  position: relative;
+  z-index: 1;
+}
