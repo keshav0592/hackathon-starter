@@ -1,5 +1,6 @@
 import React from "react";
 import { withAsyncAction } from "../../redux/HOCs";
+import "./messages.css"
 
 class Messages extends React.Component {
   constructor(props) {
