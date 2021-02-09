@@ -1,9 +1,19 @@
-#login-form {
-  background-color: aqua;
-  display: flex;
-  flex-direction: column;
-  max-width: 40em;
-  color: blue;
+* {
+  box-sizing: border-box;
+}
+.LoginForm {
+  max-width: 280px;
+  max-height: 100px;
+  margin: 50px auto;
+  text-align: center;
+  color: whitesmoke;
+}
+
+button {
+  margin-top: 25px;
+}
+div {
+  margin-top: 1rem;
 }
 #img{
   display: center;

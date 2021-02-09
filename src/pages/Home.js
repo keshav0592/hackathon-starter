@@ -19,7 +19,6 @@ class Home extends React.Component {
   <Row color = "red">
       <div className="Home">
         <Menu />
-        <h2>Your favorite microblogging platform</h2>
         <LoginForm />
       </div>
       </Row>
