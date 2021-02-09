@@ -1,5 +1,17 @@
-#login-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 20em;
+* {
+  box-sizing: border-box;
+}
+.LoginForm {
+  max-width: 280px;
+  max-height: 100px;
+  margin: 50px auto;
+  text-align: center;
+  color: whitesmoke;
+}
+
+button {
+  margin-top: 25px;
+}
+div {
+  margin-top: 1rem;
 }
