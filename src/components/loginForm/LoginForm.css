@@ -1,5 +1,10 @@
 #login-form {
+  background-color: aqua;
   display: flex;
   flex-direction: column;
-  max-width: 20em;
+  max-width: 40em;
+  color: blue;
+}
+#img{
+  display: center;
 }
