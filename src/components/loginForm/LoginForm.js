@@ -2,11 +2,8 @@ import React from "react";
 import Spinner from "react-spinkit";
 import { withAsyncAction } from "../../redux/HOCs";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./LoginForm.css";
-import { Card } from "react-bootstrap";
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -30,44 +27,17 @@ class LoginForm extends React.Component {
     const { loading, error } = this.props;
     return (
       <div className="LoginForm">
-        <Card style={{ width: "18rem" }} bg="dark">
-          <Card.Body>
-            <Card.Title>Stay Connected and Happy Hacking! </Card.Title>
-            <hr />
-            <form id="login-form" onSubmit={this.handleLogin}>
-              {/* <label htmlFor="username">Username</label> */}
-              <div>
-                <input
-                  type="text"
-                  name="username"
-                  autoFocus
-                  required
-                  onChange={this.handleChange}
-                  placeholder="Username"
-                />
-              </div>
-              <div>
-                {/* <label htmlFor="password">Password</label> */}
-                <input
-                  type="password"
-                  name="password"
-                  required
-                  onChange={this.handleChange}
-                  placeholder="Password"
-                />
-              </div>
-              <hr />
-              <Button variant="info" type="submit">
-                Sign In
-              </Button>{" "}
-              {loading && <Spinner name="circle" color="blue" />}
-              {error && <p style={{ color: "red" }}>{error.message}</p>}
-            </form>
-            <Button variant="info" type="submit">
-              <Link to="/NewAccount"> Sign Up</Link>
-            </Button>{" "}
-          </Card.Body>
-        </Card>
+        <form id="login-form" onSubmit={this.handleLogin}>
+          <label htmlFor="username">Username</label>
+          <input type="text" name="username" autoFocus required onChange={this.handleChange} />
+          <label htmlFor="password">Password</label>
+          <input type="password" name="password" required onChange={this.handleChange} />
+          <Button variant="primary" type="submit" disabled={loading}>
+            Login
+          </Button>
+        </form>
+        {loading && <Spinner name="circle" color="blue" />}
+        {error && <p style={{ color: "red" }}>{error.message}</p>}
       </div>
     );
   }

@@ -1,0 +1,14 @@
+.Messages {
+    background-color: rgb(135, 250, 160);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    border-radius: 1em;
+  }
+
+.Messages .ListMessage {
+    text-align: center;
+    font-style: italic;
+    color: blueviolet;
+}

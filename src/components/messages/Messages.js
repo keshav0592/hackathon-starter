@@ -1,9 +1,8 @@
 import React from "react";
 import { withAsyncAction } from "../../redux/HOCs";
+import "./Messages.css";
 import Button from "react-bootstrap/Button";
-import "./message.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card } from "react-bootstrap";
 
 class Messages extends React.Component {
   constructor(props) {
@@ -65,34 +64,17 @@ class Messages extends React.Component {
 
     if (this.state.messages) {
       display = this.state.messages.map((value) => {
-        return (
-          <div className="deleteHoover">
-            <p key={value.id}>{value.text}</p>
-            <button id={value.id} onClick={this.handleDelete} className="deleteButton">
-              Delete
-            </button>
-            <br />
-          </div>
-        );
+        return <div key={value.id}>{value.text}</div>;
       });
     }
 
     return (
       <div className="Messages">
-        <Card style={{ width: "18rem" }} bg="dark">
-          <div className="ListMessage">
-            {display}
-            <div className="buttonDiv">
-              <input
-                name="message"
-                onChange={this.handleChange}
-                value={this.state.message}
-                placeholder="Type your Messages"
-              />
-              <Button onClick={this.newMessageHandler}> Send </Button>
-            </div>
-          </div>
-        </Card>
+        <div className="ListMessage">{display}</div>
+        <div className="NewMessage">
+          <input name="message" onChange={this.handleChange} value={this.state.message} />
+          <Button onClick={this.newMessageHandler}> Send Message </Button>
+        </div>
       </div>
     );
   }
