@@ -1,5 +1,5 @@
 .Messages {
-    background-color: rgb(189, 209, 193);
+    background-color: rgb(135, 250, 160);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,5 +10,5 @@
 .Messages .ListMessage {
     text-align: center;
     font-style: italic;
-    color: rgb(226, 141, 43);
+    color: blueviolet;
 }
